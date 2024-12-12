@@ -182,15 +182,14 @@ elif page == "graph":
 
 # Page 3: Team Members
 elif page == "team":
-    st.title("Meet the Team")
-    st.write("Here are the amazing people behind this project:")
+    st.title("Meet Group 1")
+    st.write("Here are the amazing people behind this little project:")
 
     team_members = [
-        "Alice Johnson - Project Manager",
-        "Bob Smith - Lead Developer",
-        "Catherine Lee - Data Scientist",
-        "Daniel Kim - UI/UX Designer",
-        "Emma Brown - QA Specialist",
+        "Shafira Salsabiila",
+        "Vladyslav Baklanov",
+        "Nevin Kenneth",
+        "Tirza"
     ]
 
     for member in team_members:
