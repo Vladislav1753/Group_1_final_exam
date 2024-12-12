@@ -30,6 +30,7 @@ def navigation():
         <div class="navigation">
             <a href="/?page=map">City Connections Map</a>
             <a href="/?page=graph">Graph Generator</a>
+            <a href="/?page=team">Team Members</a>
         </div>
         """,
         unsafe_allow_html=True,
@@ -178,3 +179,19 @@ elif page == "graph":
             ax=ax
         )
         st.pyplot(fig)  # Display the graph in Streamlit
+
+# Page 3: Team Members
+elif page == "team":
+    st.title("Meet the Team")
+    st.write("Here are the amazing people behind this project:")
+
+    team_members = [
+        "Alice Johnson - Project Manager",
+        "Bob Smith - Lead Developer",
+        "Catherine Lee - Data Scientist",
+        "Daniel Kim - UI/UX Designer",
+        "Emma Brown - QA Specialist",
+    ]
+
+    for member in team_members:
+        st.write(f"- {member}")
