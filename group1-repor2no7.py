@@ -39,7 +39,7 @@ def navigation():
 navigation()
 
 # Get the current page from query parameters
-query_params = st.experimental_get_query_params()
+query_params = st.query_params()
 page = query_params.get("page", ["map"])[0]
 
 # Page 1: City Connections Map
