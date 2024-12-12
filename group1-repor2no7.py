@@ -178,7 +178,3 @@ elif page == "graph":
             ax=ax
         )
         st.pyplot(fig)  # Display the graph in Streamlit
-
-        # Display graph information
-        st.write(f"Number of nodes: {G.number_of_nodes()}")
-        st.write(f"Number of edges: {G.number_of_edges()}")
