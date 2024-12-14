@@ -6,42 +6,49 @@ import networkx as nx
 import random
 
 # Set up custom navigation with links
-def navigation():
+def navigation(current_page):
     st.markdown(
-        """
+        f"""
         <style>
-        .navigation {
+        .navigation {{
             background-color: #f2f2f2;
             padding: 10px;
             text-align: center;
             margin-bottom: 20px;
-        }
-        .navigation a {
+        }}
+        .navigation a {{
             text-decoration: none;
             color: #007BFF;
             margin: 0 15px;
             font-weight: bold;
             font-size: 16px;
-        }
-        .navigation a:hover {
+        }}
+        .navigation a:hover {{
             text-decoration: underline;
-        }
+        }}
+        .navigation a.active {{
+            color: gray;
+            pointer-events: none;
+            text-decoration: none;
+        }}
         </style>
         <div class="navigation">
-            <a href="/?page=map">City Connections Map</a>
-            <a href="/?page=graph">Graph Generator</a>
-            <a href="/?page=team">Team Members</a>
+            <a href="/?page=map" class="{ 'active' if current_page == 'map' else '' }">City Connections Map</a>
+            <a href="/?page=graph" class="{ 'active' if current_page == 'graph' else '' }">Graph Generator</a>
+            <a href="/?page=team" class="{ 'active' if current_page == 'team' else '' }">Team Members</a>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
-# Render navigation
-navigation()
+
 
 # Get the current page from query parameters
 query_params = st.experimental_get_query_params()
 page = query_params.get("page", ["map"])[0]
+
+# Render navigation
+navigation(current_page=page)
 
 # Page 1: City Connections Map
 if page == "map":
