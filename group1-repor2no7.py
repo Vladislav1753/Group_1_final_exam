@@ -195,7 +195,7 @@ elif page == "team":
         "Shafira Salsabiila",
         "Vladyslav Baklanov",
         "Nevin Kenneth",
-        "Tirza"
+        "Tirza Naftali"
     ]
 
     for member in team_members:
